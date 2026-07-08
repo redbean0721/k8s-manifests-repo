@@ -12,8 +12,8 @@ spec:
     port: 80
   replicas:
     min: 0
-    max: 10
+    max: 5
   scaledownPeriod: 30
   scalingMetric:
         requestRate:
-            targetValue: 5
+            targetValue: 25

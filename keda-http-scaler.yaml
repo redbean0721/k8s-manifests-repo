@@ -13,6 +13,4 @@ spec:
   replicas:
     min: 0
     max: 10
-  scalingMetric:
-    requestCount:
-      targetValue: 5
+  targetPendingRequests: 5

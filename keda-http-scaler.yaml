@@ -13,4 +13,7 @@ spec:
   replicas:
     min: 0
     max: 10
-  targetPendingRequests: 5
+  scaledownPeriod: 30
+  scalingMetric:
+        requestRate:
+            targetValue: 5

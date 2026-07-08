@@ -1,0 +1,17 @@
+kind: HTTPScaledObject
+apiVersion: http.keda.sh/v1alpha1
+metadata:
+  name: python-app-http-scaler
+  namespace: python-app-ns
+spec:
+  scaleTargetRef:
+    name: python-app
+    kind: Deployment
+    apiVersion: apps/v1
+    service: python-app-svc
+    port: 80
+  replicas:
+    min: 0
+    max: 10
+  scalingMetric:
+    rateTargetValue: 5
